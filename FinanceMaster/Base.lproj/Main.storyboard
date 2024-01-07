@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UVm-6g-XTz">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Витрати-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainPageViewController" customModule="FinanceMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPS-Or-lBv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uLg-zF-jlc">
+                                        <rect key="frame" x="137.33333333333334" y="100" width="100.33333333333334" height="59"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="oKR-7W-2X6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="tke-rO-Vbv"/>
+                                            <outlet property="pasteDelegate" destination="BYZ-38-t0r" id="qHL-a7-TB8"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF6-e4-hWB">
+                                        <rect key="frame" x="101" y="212" width="173" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="173" id="j5R-Lm-f77"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Встановити ліміт"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uLg-zF-jlc" firstAttribute="centerY" secondItem="nPS-Or-lBv" secondAttribute="centerY" id="Jt2-4F-pGn"/>
+                                    <constraint firstAttribute="bottom" secondItem="yF6-e4-hWB" secondAttribute="bottom" constant="12" id="Wvp-1A-hbr"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="uLg-zF-jlc" secondAttribute="trailing" constant="137.33333333333334" id="XIb-qE-rch"/>
+                                    <constraint firstItem="yF6-e4-hWB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nPS-Or-lBv" secondAttribute="leading" constant="101" id="dRv-qt-4FV"/>
+                                    <constraint firstAttribute="trailing" secondItem="yF6-e4-hWB" secondAttribute="trailing" constant="101" id="jV6-zv-UNc"/>
+                                    <constraint firstItem="uLg-zF-jlc" firstAttribute="centerX" secondItem="nPS-Or-lBv" secondAttribute="centerX" id="mAL-ty-EeJ"/>
+                                    <constraint firstItem="uLg-zF-jlc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nPS-Or-lBv" secondAttribute="leading" constant="137.33333333333334" id="nsK-5C-SbI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.98436468839645386" green="0.98536938428878784" blue="0.96698182821273804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nPS-Or-lBv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QZz-OY-Scr"/>
+                            <constraint firstItem="nPS-Or-lBv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vwr-dH-bww"/>
+                            <constraint firstItem="nPS-Or-lBv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.318966" id="YrN-Ba-06c"/>
+                            <constraint firstItem="nPS-Or-lBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tHI-3E-9Tk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Витрати" id="n4N-UN-7Xx"/>
+                    <connections>
+                        <outlet property="centralButtonNumber" destination="uLg-zF-jlc" id="erc-ta-6GW"/>
+                        <outlet property="centralGrayView" destination="nPS-Or-lBv" id="Qy6-m5-SV2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954.4000000000001" y="2.9556650246305418"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aoZ-JY-kfl">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UVm-6g-XTz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F3Q-uJ-IQ9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Pk5-oj-G7w" kind="relationship" relationship="viewControllers" id="WU6-ua-6Qh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWJ-9y-zXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="y0h-an-LLV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Pk5-oj-G7w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="cart" catalog="system" id="YKL-Br-f3N"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h5Q-ef-pd0">
+                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="30"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8hf-de-evu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJn-6Z-Lj0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+    </resources>
+</document>
