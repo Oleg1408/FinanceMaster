@@ -1,5 +1,5 @@
 //
-//  SettingsMainView.swift
+//  SettingsMainNum.swift
 //  FinanceMaster
 //
 //  Created by Олег Курбатов on 22.11.2023.
@@ -10,19 +10,10 @@ import UIKit
 
 extension MainPageViewController {
     
-    
-    // MARK: - settings menu first page
-    func settingsMainView() {
-        
-        // corner radius gray view
-        let sizeForCentralGrayView: CGFloat = 30
-        centralGrayView.layer.cornerRadius = sizeForCentralGrayView
-    }
-    
-    
     // MARK: - create press textField button
     
     func createNumberPad() -> UIView {
+        
         let numberPadView = UIView()
         numberPadView.backgroundColor = .white
         
@@ -104,7 +95,7 @@ extension MainPageViewController {
     }
     
     @objc func clearButtonTapped() {
-        // Удалить одну цифру из текстового поля
+        // Delete number from text field 
         let currentText = centralButtonNumber.text ?? ""
         if !currentText.isEmpty {
             centralButtonNumber.text?.removeLast()

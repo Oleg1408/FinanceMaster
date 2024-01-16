@@ -12,8 +12,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    // MARK: - screen orientation
+    
     static let orientationScreen: UIInterfaceOrientationMask = [.portrait, .portraitUpsideDown]
 
+    // MARK: - white screen
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if #available(iOS 15.0, *) {
             window?.overrideUserInterfaceStyle = .light
