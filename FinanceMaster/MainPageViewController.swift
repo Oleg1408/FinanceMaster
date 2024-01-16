@@ -19,8 +19,10 @@ class MainPageViewController: UIViewController {
         settingsMainView()
 
     }
+    
+    // test
+    
 
-   // test
 }
 
 
