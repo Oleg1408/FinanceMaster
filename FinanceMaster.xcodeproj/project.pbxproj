@@ -18,7 +18,7 @@
 		681762AF2B017E4400A4A3AF /* FinanceMasterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681762AE2B017E4400A4A3AF /* FinanceMasterUITestsLaunchTests.swift */; };
 		681762BC2B0E5E0F00A4A3AF /* MenuDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681762BB2B0E5E0F00A4A3AF /* MenuDetails.storyboard */; };
 		681762BE2B0E614400A4A3AF /* StatisticsMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681762BD2B0E614400A4A3AF /* StatisticsMenu.storyboard */; };
-		681762C02B0E623300A4A3AF /* SettingsFirstPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681762BF2B0E623300A4A3AF /* SettingsFirstPageView.swift */; };
+		681762C02B0E623300A4A3AF /* SettingsMainNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681762BF2B0E623300A4A3AF /* SettingsMainNum.swift */; };
 		68D83A982B2F8A3F002DA96C /* SettingsTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D83A972B2F8A3F002DA96C /* SettingsTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +55,7 @@
 		681762AE2B017E4400A4A3AF /* FinanceMasterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMasterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		681762BB2B0E5E0F00A4A3AF /* MenuDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuDetails.storyboard; sourceTree = "<group>"; };
 		681762BD2B0E614400A4A3AF /* StatisticsMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticsMenu.storyboard; sourceTree = "<group>"; };
-		681762BF2B0E623300A4A3AF /* SettingsFirstPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFirstPageView.swift; sourceTree = "<group>"; };
+		681762BF2B0E623300A4A3AF /* SettingsMainNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMainNum.swift; sourceTree = "<group>"; };
 		68D83A972B2F8A3F002DA96C /* SettingsTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +141,7 @@
 		681762C12B0E636800A4A3AF /* FirstPageCategory */ = {
 			isa = PBXGroup;
 			children = (
-				681762BF2B0E623300A4A3AF /* SettingsFirstPageView.swift */,
+				681762BF2B0E623300A4A3AF /* SettingsMainNum.swift */,
 				68D83A972B2F8A3F002DA96C /* SettingsTextFieldDelegate.swift */,
 			);
 			path = FirstPageCategory;
@@ -282,7 +282,7 @@
 			files = (
 				681762902B017E4300A4A3AF /* MainPageViewController.swift in Sources */,
 				6817628C2B017E4300A4A3AF /* AppDelegate.swift in Sources */,
-				681762C02B0E623300A4A3AF /* SettingsFirstPageView.swift in Sources */,
+				681762C02B0E623300A4A3AF /* SettingsMainNum.swift in Sources */,
 				6817628E2B017E4300A4A3AF /* SceneDelegate.swift in Sources */,
 				68D83A982B2F8A3F002DA96C /* SettingsTextFieldDelegate.swift in Sources */,
 			);

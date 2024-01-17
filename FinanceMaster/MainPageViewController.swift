@@ -8,19 +8,27 @@
 import UIKit
 
 class MainPageViewController: UIViewController {
-
-    // MARK: - Central Gray View
+    
+    // MARK: - central gray view
     @IBOutlet weak var centralGrayView: UIView!
     @IBOutlet weak var centralButtonNumber: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         settingsMainView()
-
+        
     }
-
-   // test
+    
+    
+    // MARK: - settings menu first page
+    private func settingsMainView() {
+        
+        // corner radius gray view
+        let sizeForCentralGrayView: CGFloat = 30
+        centralGrayView.layer.cornerRadius = sizeForCentralGrayView
+    }
+    
 }
 
 

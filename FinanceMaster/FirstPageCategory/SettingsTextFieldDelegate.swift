@@ -10,6 +10,8 @@ import UIKit
 
 extension MainPageViewController: UITextFieldDelegate {
     
+    // MARK: - limitation text field
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         centralButtonNumber.delegate = self
@@ -26,7 +28,7 @@ extension MainPageViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField.text?.hasPrefix("0") == true {
             textField.text = ""
-        }
+        } 
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
