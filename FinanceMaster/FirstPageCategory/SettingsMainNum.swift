@@ -22,6 +22,13 @@ extension MainPageViewController {
         numberPad.spacing = 5
         numberPad.alignment = .fill
         
+        let doneButton = UIButton(type: .system)
+        doneButton.setTitle("Готово", for: .normal)
+        doneButton.tintColor = .magenta
+        doneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
+        
+        numberPad.addArrangedSubview(doneButton)
         
         for row in 0..<4 {
             let horizontalStack = UIStackView()
@@ -62,14 +69,6 @@ extension MainPageViewController {
             
             numberPad.addArrangedSubview(horizontalStack)
         }
-        
-        let doneButton = UIButton(type: .system)
-        doneButton.setTitle("Готово", for: .normal)
-        doneButton.tintColor = .magenta
-        doneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
-        
-        numberPad.addArrangedSubview(doneButton)
         
         numberPadView.addSubview(numberPad)
         numberPadView.translatesAutoresizingMaskIntoConstraints = false

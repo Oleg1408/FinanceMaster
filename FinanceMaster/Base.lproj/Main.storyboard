@@ -256,6 +256,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EEw-pv-lHy">
+                                <rect key="frame" x="0.0" y="475" width="375" height="85"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.98436468839645386" green="0.98536938428878784" blue="0.96698182821273804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -264,6 +268,7 @@
                     <connections>
                         <outlet property="centralButtonNumber" destination="uLg-zF-jlc" id="erc-ta-6GW"/>
                         <outlet property="centralGrayView" destination="nPS-Or-lBv" id="Qy6-m5-SV2"/>
+                        <outlet property="setDate" destination="EEw-pv-lHy" id="fVi-ZQ-tmC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

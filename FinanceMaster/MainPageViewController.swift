@@ -13,23 +13,26 @@ class MainPageViewController: UIViewController {
     @IBOutlet weak var centralGrayView: UIView!
     @IBOutlet weak var centralButtonNumber: UITextField!
     
+    
+    
+    // MARK: - date button
+    @IBOutlet weak var setDate: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         settingsMainView()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        settingsDate()
     }
     
     
     // MARK: - settings menu first page
     private func settingsMainView() {
         
-        // corner radius gray view
         let sizeForCentralGrayView: CGFloat = 30
         centralGrayView.layer.cornerRadius = sizeForCentralGrayView
     }
     
 }
-
-
-// test
