@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +30,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF6-e4-hWB">
-                                        <rect key="frame" x="101" y="212" width="173" height="35"/>
+                                        <rect key="frame" x="104" y="212" width="167" height="35"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Встановити ліміт">
@@ -42,11 +43,9 @@
                                     <constraint firstItem="uLg-zF-jlc" firstAttribute="centerY" secondItem="nPS-Or-lBv" secondAttribute="centerY" id="12T-9O-RfB"/>
                                     <constraint firstAttribute="trailing" secondItem="uLg-zF-jlc" secondAttribute="trailing" constant="137.33333333333331" id="CVg-f0-aJK"/>
                                     <constraint firstItem="uLg-zF-jlc" firstAttribute="centerX" secondItem="nPS-Or-lBv" secondAttribute="centerX" id="DIS-qW-gZe"/>
+                                    <constraint firstItem="yF6-e4-hWB" firstAttribute="centerX" secondItem="nPS-Or-lBv" secondAttribute="centerX" id="DmK-zs-ORM"/>
                                     <constraint firstItem="uLg-zF-jlc" firstAttribute="top" secondItem="nPS-Or-lBv" secondAttribute="top" constant="105.33333333333333" id="LmW-Yl-p2f"/>
                                     <constraint firstItem="uLg-zF-jlc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nPS-Or-lBv" secondAttribute="leading" constant="20" symbolic="YES" id="XO5-4N-YS7"/>
-                                    <constraint firstItem="yF6-e4-hWB" firstAttribute="leading" secondItem="nPS-Or-lBv" secondAttribute="leading" constant="101" id="ZiP-Hs-bNt"/>
-                                    <constraint firstAttribute="trailing" secondItem="yF6-e4-hWB" secondAttribute="trailing" constant="101" id="hbM-lM-PFo"/>
-                                    <constraint firstItem="uLg-zF-jlc" firstAttribute="width" secondItem="nPS-Or-lBv" secondAttribute="width" multiplier="0.267556" id="mgC-Ad-x47"/>
                                     <constraint firstAttribute="bottom" secondItem="yF6-e4-hWB" secondAttribute="bottom" constant="12" id="vx4-0C-Ncz"/>
                                 </constraints>
                             </view>
@@ -56,9 +55,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EEw-pv-lHy">
-                                <rect key="frame" x="0.0" y="688" width="375" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="EEw-pv-lHy">
+                                <rect key="frame" x="8" y="449.33333333333331" width="148" height="34.333333333333314"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="5Yh-ti-ykz"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="uk_UA"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="g7Q-Jq-cEq">
                                 <rect key="frame" x="8" y="301" width="359" height="50.666666666666686"/>
@@ -270,6 +273,34 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ліміт в місяць" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkq-oD-0YJ">
+                                <rect key="frame" x="8" y="525" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Доступно для витрат" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cci-BK-Ypj">
+                                <rect key="frame" x="8" y="560" width="183" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mm8-yQ-q8i">
+                                <rect key="frame" x="309" y="523" width="50" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0os-Sw-JuY">
+                                <rect key="frame" x="309" y="560" width="50" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.98436468839645386" green="0.98536938428878784" blue="0.96698182821273804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -283,8 +314,10 @@
                             <constraint firstItem="nPS-Or-lBv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.318966" id="N9U-uv-mTK"/>
                             <constraint firstItem="QRy-Yh-YTA" firstAttribute="top" secondItem="nPS-Or-lBv" secondAttribute="bottom" constant="16" id="WD4-tF-xFb"/>
                             <constraint firstItem="N5Y-wI-FWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="aiW-ao-QqC"/>
+                            <constraint firstItem="EEw-pv-lHy" firstAttribute="top" secondItem="N5Y-wI-FWo" secondAttribute="bottom" constant="32" id="dRu-or-pbO"/>
                             <constraint firstItem="QRy-Yh-YTA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="iTu-RS-sQf"/>
                             <constraint firstItem="nPS-Or-lBv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iez-ZC-7Kh"/>
+                            <constraint firstItem="EEw-pv-lHy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="p9d-D7-quh"/>
                             <constraint firstItem="nPS-Or-lBv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wwu-Gx-U9E"/>
                             <constraint firstItem="nPS-Or-lBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zw8-Ti-nkG"/>
                         </constraints>
@@ -346,5 +379,8 @@
     </scenes>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
