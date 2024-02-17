@@ -1,9 +1,3 @@
-//
-//  SettingsTextFieldDelegate.swift
-//  FinanceMaster
-//
-//  Created by Олег Курбатов on 17.12.2023.
-//
 
 import Foundation
 import UIKit
@@ -28,7 +22,7 @@ extension MainPageViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField.text?.hasPrefix("0") == true {
             textField.text = ""
-        } 
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -38,5 +32,3 @@ extension MainPageViewController: UITextFieldDelegate {
     
     
 }
-
-

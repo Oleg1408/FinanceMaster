@@ -1,10 +1,3 @@
-//
-//  SettingsMainNum.swift
-//  FinanceMaster
-//
-//  Created by Олег Курбатов on 22.11.2023.
-//
-
 import Foundation
 import UIKit
 
@@ -38,7 +31,7 @@ extension MainPageViewController {
             horizontalStack.spacing = 10
             
             if row == 3 {
-                // Add a single-digit button '0' in the last row
+                // Add a single-digit button '0' and "C" in the last row
                 let digitButton = UIButton(type: .system)
                 digitButton.setTitle("0", for: .normal)
                 digitButton.titleLabel?.font = UIFont.systemFont(ofSize: 35)
@@ -85,19 +78,17 @@ extension MainPageViewController {
     }
     
     @objc func digitButtonTapped(_ sender: UIButton) {
-        let digit = sender.currentTitle ?? ""
+         guard let digit = sender.currentTitle, !digit.isEmpty else { return }
         centralButtonNumber.text?.append(digit)
-    }
-    
-    @objc func doneButtonTapped() {
-        centralButtonNumber.resignFirstResponder()
-    }
-    
-    @objc func clearButtonTapped() {
-        // Delete number from text field 
-        let currentText = centralButtonNumber.text ?? ""
-        if !currentText.isEmpty {
-            centralButtonNumber.text?.removeLast()
-        }
-    }
+     }
+     
+     @objc func doneButtonTapped() {
+         centralButtonNumber.resignFirstResponder()
+     }
+     
+     @objc func clearButtonTapped() {
+         // Delete number from text field
+         guard let currentText = centralButtonNumber.text, !currentText.isEmpty else { return }
+         centralButtonNumber.text?.removeLast()
+     }
 }
