@@ -8,6 +8,11 @@ extension MainPageViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
+        guard textField == centralButtonNumber else {
+             print("Помилка: Помилкове текстове поле")
+             return
+         }
+        
         centralButtonNumber.delegate = self
         centralButtonNumber.keyboardType = .numberPad
         centralButtonNumber.inputView = createNumberPad()

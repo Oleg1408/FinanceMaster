@@ -8,7 +8,7 @@ extension MainPageViewController {
     func createNumberPad() -> UIView {
         
         let numberPadView = UIView()
-        numberPadView.backgroundColor = .white
+        numberPadView.backgroundColor = darkBlue
         
         let numberPad = UIStackView()
         numberPad.axis = .vertical
@@ -17,7 +17,7 @@ extension MainPageViewController {
         
         let doneButton = UIButton(type: .system)
         doneButton.setTitle("Готово", for: .normal)
-        doneButton.tintColor = .magenta
+        doneButton.tintColor = .white
         doneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
         
@@ -35,14 +35,14 @@ extension MainPageViewController {
                 let digitButton = UIButton(type: .system)
                 digitButton.setTitle("0", for: .normal)
                 digitButton.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-                digitButton.tintColor = .darkGray
+                digitButton.tintColor = darkOrange
                 digitButton.addTarget(self, action: #selector(digitButtonTapped(_:)), for: .touchUpInside)
                 horizontalStack.addArrangedSubview(digitButton)
                 
                 let clearButton = UIButton(type: .system)
                 clearButton.setTitle("C", for: .normal)
                 clearButton.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-                clearButton.tintColor = .red
+                clearButton.tintColor = darkOrange
                 clearButton.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
                 horizontalStack.addArrangedSubview(clearButton)
                 
@@ -54,7 +54,7 @@ extension MainPageViewController {
                     let digit = row * 3 + col + 1
                     digitButton.setTitle("\(digit % 10)", for: .normal)
                     digitButton.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-                    digitButton.tintColor = .darkGray
+                    digitButton.tintColor = darkOrange
                     digitButton.addTarget(self, action: #selector(digitButtonTapped(_:)), for: .touchUpInside)
                     horizontalStack.addArrangedSubview(digitButton)
                 }
