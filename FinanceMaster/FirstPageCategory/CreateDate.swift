@@ -1,11 +1,3 @@
-//
-//  SetDate.swift
-//  FinanceMaster
-//
-//  Created by Олег Курбатов on 07.02.2024.
-//
-
-import Foundation
 import UIKit
 
 class DateSettings {
@@ -26,6 +18,5 @@ class DateSettings {
         datePicker.minimumDate = calendarMin.date(from: dateComponents)
         
         datePicker.maximumDate = Date()
-        
     }
 }

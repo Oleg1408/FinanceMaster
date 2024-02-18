@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 
 extension MainPageViewController {
@@ -8,7 +7,7 @@ extension MainPageViewController {
     func createNumberPad() -> UIView {
         
         let numberPadView = UIView()
-        numberPadView.backgroundColor = darkBlue
+        numberPadView.backgroundColor = darkBlueColor
         
         let numberPad = UIStackView()
         numberPad.axis = .vertical
@@ -35,18 +34,16 @@ extension MainPageViewController {
                 let digitButton = UIButton(type: .system)
                 digitButton.setTitle("0", for: .normal)
                 digitButton.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-                digitButton.tintColor = darkOrange
+                digitButton.tintColor = darkOrangeColor
                 digitButton.addTarget(self, action: #selector(digitButtonTapped(_:)), for: .touchUpInside)
                 horizontalStack.addArrangedSubview(digitButton)
                 
                 let clearButton = UIButton(type: .system)
                 clearButton.setTitle("C", for: .normal)
                 clearButton.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-                clearButton.tintColor = darkOrange
+                clearButton.tintColor = darkOrangeColor
                 clearButton.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
                 horizontalStack.addArrangedSubview(clearButton)
-                
-                
             } else {
                 // Add three buttons for other rows
                 for col in 0..<3 {
@@ -54,7 +51,7 @@ extension MainPageViewController {
                     let digit = row * 3 + col + 1
                     digitButton.setTitle("\(digit % 10)", for: .normal)
                     digitButton.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-                    digitButton.tintColor = darkOrange
+                    digitButton.tintColor = darkOrangeColor
                     digitButton.addTarget(self, action: #selector(digitButtonTapped(_:)), for: .touchUpInside)
                     horizontalStack.addArrangedSubview(digitButton)
                 }
